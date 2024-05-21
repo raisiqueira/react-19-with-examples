@@ -1,0 +1,12 @@
+{
+  "name": "root-workspace",
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "format:check": "pnpm -r format:check",
+    "format:write": "pnpm -r format:write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "concurrently": "^8.2.2"
+  }
+}
