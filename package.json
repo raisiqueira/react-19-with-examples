@@ -8,5 +8,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.7.3",
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "react-error-boundary": "^4.0.13"
   }
 }

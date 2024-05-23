@@ -10,7 +10,7 @@ const BaseLayout = () => {
         <div className="h-auto bg-gray-200">
           <VerticalNav />
         </div>
-        <div className="h-auto bg-gray-200">
+        <div className="h-auto bg-gray-200 p-4">
           <Outlet />
         </div>
       </div>
