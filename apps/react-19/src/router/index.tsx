@@ -33,6 +33,15 @@ const routeElements = createRoutesFromElements(
         };
       }}
     />
+    <Route
+      path="optimistic-01"
+      lazy={async () => {
+        const { UseOptimisticExample } = await import("@/features/use-optimistic");
+        return {
+          Component: UseOptimisticExample,
+        };
+      }}
+    />
     <Route path="*" element={<div>404</div>} />
   </Route>,
 );
