@@ -1,14 +1,22 @@
 import { useOptimistic, useState, useRef } from "react";
 
-interface Message {
+type Message = {
   text: string;
   sending?: boolean;
-}
+};
 
-interface MessageFormProps {
+type SendMessage = (message: FormData) => Promise<void>;
+
+type MessageFormProps = {
   addOptimisticMessage: (message: string) => void;
-  sendMessage: (formData: FormData) => Promise<void>;
-}
+  sendMessage: SendMessage;
+};
+
+const deliverMessage = async (message: string) => {
+  // Simulate a delay
+  await new Promise((res) => setTimeout(res, 1000));
+  return message;
+};
 
 const MessageForm = ({ addOptimisticMessage, sendMessage }: MessageFormProps) => {
   // Create a reference to the form
@@ -42,14 +50,14 @@ const MessageForm = ({ addOptimisticMessage, sendMessage }: MessageFormProps) =>
   );
 };
 
-const Thread = ({ messages, sendMessage }) => {
+const Thread = ({ messages, sendMessage }: { messages: Message[]; sendMessage: SendMessage }) => {
   // The useOptimistic hook is used to add an optimistic message to the list of messages
   const [optimisticMessages, addOptimisticMessage] = useOptimistic(
     messages,
     (state, newMessage) => [
       ...state,
       {
-        text: newMessage,
+        text: newMessage as string,
         sending: true,
       },
     ],
@@ -68,14 +76,8 @@ const Thread = ({ messages, sendMessage }) => {
   );
 };
 
-const deliverMessage = async (message: string) => {
-  // Simulate a delay
-  await new Promise((res) => setTimeout(res, 1000));
-  return message;
-};
-
 const MessageBox = () => {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<Message[]>([]);
 
   async function sendMessage(formData: FormData) {
     const sentMessage = await deliverMessage(formData.get("message") as string);

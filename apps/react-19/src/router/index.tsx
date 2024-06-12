@@ -42,6 +42,16 @@ const routeElements = createRoutesFromElements(
         };
       }}
     />
+    <Route
+      path="optimistic-02"
+      lazy={async () => {
+        const { UseOptimisticExample02 } = await import("@/features/use-optimistic");
+        return {
+          Component: UseOptimisticExample02,
+        };
+      }}
+      errorElement={<div>Failed to load</div>}
+    />
     <Route path="*" element={<div>404</div>} />
   </Route>,
 );

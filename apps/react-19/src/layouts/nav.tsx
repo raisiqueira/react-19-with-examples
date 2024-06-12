@@ -9,6 +9,7 @@ const ROUTES = [
   { path: "/actions-example-01", label: "Actions" },
   { path: "/actions-example-02", label: "Actions example 02" },
   { path: "/optimistic-01", label: "useOptimistic" },
+  { path: "/optimistic-02", label: "useOptimistic with error" },
   { path: "/transition-01", label: "useTransition" },
 ];
 
