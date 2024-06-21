@@ -52,6 +52,16 @@ const routeElements = createRoutesFromElements(
       }}
       errorElement={<div>Failed to load</div>}
     />
+    <Route
+      path="use-form-status"
+      lazy={async () => {
+        const { UseFormStatusExample } = await import("@/features/use-form-status");
+        return {
+          Component: UseFormStatusExample,
+        };
+      }}
+      errorElement={<div>Failed to load</div>}
+    />
     <Route path="*" element={<div>404</div>} />
   </Route>,
 );

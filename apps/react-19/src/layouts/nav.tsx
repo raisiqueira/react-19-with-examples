@@ -4,12 +4,13 @@ import { NavLink } from "react-router-dom";
 const ROUTES = [
   { path: "/", label: "Home" },
   { path: "/use-example-01", label: "use() fetch an API" },
-  { path: "/use-example-02", label: "use() fetch an API 02" },
   { path: "/use-example-03", label: "use() + Context" },
-  { path: "/actions-example-01", label: "Actions" },
-  { path: "/actions-example-02", label: "Actions example 02" },
+  //  { path: "/use-example-02", label: "use() fetch an API 02" },
   { path: "/optimistic-01", label: "useOptimistic" },
   { path: "/optimistic-02", label: "useOptimistic with error" },
+  { path: "/use-form-status", label: "useFormStatus" },
+  { path: "/actions-example-01", label: "Actions" },
+  { path: "/actions-example-02", label: "Actions example 02" },
   { path: "/transition-01", label: "useTransition" },
 ];
 
