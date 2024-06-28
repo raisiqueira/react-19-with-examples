@@ -9,9 +9,9 @@ const ROUTES = [
   { path: "/optimistic-01", label: "useOptimistic" },
   { path: "/optimistic-02", label: "useOptimistic with error" },
   { path: "/use-form-status", label: "useFormStatus" },
-  { path: "/actions-example-01", label: "Actions" },
-  { path: "/actions-example-02", label: "Actions example 02" },
-  { path: "/transition-01", label: "useTransition" },
+  //  { path: "/actions-example-01", label: "Actions" },
+  //  { path: "/actions-example-02", label: "Actions example 02" },
+  //  { path: "/transition-01", label: "useTransition" },
 ];
 
 const VerticalNav = () => {

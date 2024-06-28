@@ -30,7 +30,6 @@ const ThemeProvider = ({ children }: PropsWithChildren<Record<string, unknown>>)
 
 const ThemedCard = () => {
   const { theme, toggleTheme } = use(ThemeContext) as ThemeContextType;
-
   return (
     <div
       className={cn(

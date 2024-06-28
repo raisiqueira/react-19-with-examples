@@ -1,4 +1,4 @@
-import { Suspense, use } from "react";
+import { Suspense, use, useEffect, useState } from "react";
 
 type Songs = {
   songs: string[];

@@ -6,7 +6,7 @@ const BaseLayout = () => {
   return (
     <>
       <Header />
-      <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[320px_1fr] lg:gap-8">
+      <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[320px_1fr] lg:gap-8 max-w-[1280px] m-auto">
         <div className="h-auto bg-gray-200">
           <VerticalNav />
         </div>
